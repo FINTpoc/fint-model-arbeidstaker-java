@@ -1,3 +1,7 @@
+plugins {
+    id "com.jfrog.bintray" version "1.7"
+}
+
 project.ext {
     xsdUrls = [
             'https://raw.githubusercontent.com/FINTprosjektet/fint-informasjonsmodell/master/xsd/1.0/FINT/Felles/fintfelles.xsd',
@@ -27,3 +31,6 @@ dependencies {
 
 
 apply from: 'https://raw.githubusercontent.com/FINTprosjektet/fint-buildscripts/master/xsd.gradle'
+if (project.hasProperty('bintrayUser') && project.hasProperty('bintrayKey')) {
+    apply from: 'https://raw.githubusercontent.com/FINTprosjektet/fint-buildscripts/master/bintray.gradle'
+}
