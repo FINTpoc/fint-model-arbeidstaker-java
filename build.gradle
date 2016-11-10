@@ -1,0 +1,29 @@
+project.ext {
+    xsdUrls = [
+            'https://raw.githubusercontent.com/FINTprosjektet/fint-informasjonsmodell/master/xsd/1.0/FINT/Felles/fintfelles.xsd',
+            'https://raw.githubusercontent.com/FINTprosjektet/fint-informasjonsmodell/master/xsd/1.0/FINT/Arbeidstaker/arbeidstaker.xsd'
+    ]
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+jar {
+    baseName = 'fint-model-arbeidstaker-java'
+    version = '1.0.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile('org.projectlombok:lombok:1.16.10')
+}
+
+
+apply from: 'https://raw.githubusercontent.com/FINTprosjektet/fint-buildscripts/master/xsd.gradle'

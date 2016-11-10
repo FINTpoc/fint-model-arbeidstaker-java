@@ -1,0 +1,24 @@
+<jaxb:bindings version="2.1"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+    <jaxb:globalBindings generateElementProperty="false">
+        <xjc:simple/>
+    </jaxb:globalBindings>
+
+    <jaxb:bindings schemaLocation="arbeidstaker.xsd">
+        <jaxb:bindings node="//xs:element[@name='arbeidstaker']">
+            <jaxb:property name="arbeidstakere"/>
+        </jaxb:bindings>
+
+        <jaxb:schemaBindings>
+            <jaxb:package name="no.fk.fint.arbeidstaker" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="fintfelles.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="no.fk.fint.felles" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+</jaxb:bindings>

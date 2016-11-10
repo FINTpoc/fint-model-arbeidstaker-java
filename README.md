@@ -1,0 +1,2 @@
+# fint-model-arbeidstaker-java
+
